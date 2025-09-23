@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillBridge | Request or Offer</title>
+  <link rel="stylesheet" href="buffer.css">
+  <script>
+    // Tab switching with fade-in effect
+    function showForm(formType) {
+      const requestForm = document.getElementById("requestForm");
+      const offerForm = document.getElementById("offerForm");
+      const buttons = document.querySelectorAll(".tab-buttons button");
+
+      // Hide all forms
+      requestForm.classList.remove("active");
+      offerForm.classList.remove("active");
+
+      // Show selected form
+      if (formType === "request") {
+        requestForm.classList.add("active");
+      } else {
+        offerForm.classList.add("active");
+      }
+
+      // Tab highlight
+      buttons.forEach(btn => btn.classList.remove("active"));
+      document.getElementById(formType + "Btn").classList.add("active");
+    }
+
+    // Default: show request form
+    window.onload = () => {
+      showForm("request");
+    };
+  </script>
+</head>
+<body>
+  <h1>SkillBridge</h1>
+
+  <!-- Tab buttons -->
+  <div class="tab-buttons">
+    <button id="requestBtn" onclick="showForm('request')">Request a Skill</button>
+    <button id="offerBtn" onclick="showForm('offer')">Offer a Skill</button>
+  </div>
+
+  <!-- Request Form -->
+  <form id="requestForm">
+    <fieldset>
+      <legend>Request a Skill</legend>
+
+      <!-- Category -->
+      <label for="req-category">Category</label>
+      <select id="req-category" name="category" required>
+        <option value="">-- Select a Category --</option>
+        <option value="programming">Programming</option>
+        <option value="languages">Languages</option>
+        <option value="design">Design & Arts</option>
+        <option value="business">Business & Finance</option>
+        <option value="others">Others</option>
+      </select>
+
+      <!-- Skill to Learn -->
+      <label for="req-skill">Skill to Learn</label>
+      <input type="text" id="req-skill" name="skill" placeholder="e.g., Java Basics" required>
+
+      <!-- Urgency Level -->
+      <label for="urgency">Urgency Level</label>
+      <select id="urgency" name="urgency" required>
+        <option value="">-- Select --</option>
+        <option value="low">Low (Flexible)</option>
+        <option value="medium">Medium (Within a week)</option>
+        <option value="high">High (Urgent)</option>
+      </select>
+
+      <!-- Mode -->
+      <label for="req-mode">Preferred Mode</label>
+      <select id="req-mode" name="mode" required>
+        <option value="">-- Select --</option>
+        <option value="online">Online</option>
+        <option value="offline">Offline (In-person)</option>
+        <option value="hybrid">Hybrid</option>
+      </select>
+
+      <!-- Preferred Date -->
+      <label for="req-date">Preferred Date</label>
+      <input type="date" id="req-date" name="preferred_date">
+
+      <!-- Notes -->
+      <label for="req-details">Details / Notes</label>
+      <textarea id="req-details" name="details" rows="4" placeholder="Explain what exactly you need help with..."></textarea>
+
+      <!-- Buttons -->
+      <div class="form-actions">
+        <button type="submit">Submit Request</button>
+        <button type="reset">Clear</button>
+      </div>
+    </fieldset>
+  </form>
+
+  <!-- Offer Form -->
+  <form id="offerForm">
+    <fieldset>
+      <legend>Offer a Skill</legend>
+
+      <!-- Category -->
+      <label for="off-category">Category</label>
+      <select id="off-category" name="category" required>
+        <option value="">-- Select a Category --</option>
+        <option value="programming">Programming</option>
+        <option value="languages">Languages</option>
+        <option value="design">Design & Arts</option>
+        <option value="business">Business & Finance</option>
+        <option value="others">Others</option>
+      </select>
+
+      <!-- Skill to Offer -->
+      <label for="off-skill">Skill to Offer</label>
+      <input type="text" id="off-skill" name="skill" placeholder="e.g., Python Basics" required>
+
+      <!-- Experience Level -->
+      <label for="experience">Experience Level</label>
+      <select id="experience" name="experience" required>
+        <option value="">-- Select --</option>
+        <option value="beginner">Beginner</option>
+        <option value="intermediate">Intermediate</option>
+        <option value="expert">Expert</option>
+      </select>
+
+      <!-- Availability Date -->
+      <label for="off-date">Availability (Date)</label>
+      <input type="date" id="off-date" name="availability_date">
+
+      <!-- Mode -->
+      <label for="off-mode">Preferred Mode</label>
+      <select id="off-mode" name="mode" required>
+        <option value="">-- Select --</option>
+        <option value="online">Online</option>
+        <option value="offline">Offline (In-person)</option>
+        <option value="hybrid">Hybrid</option>
+      </select>
+
+      <!-- Notes -->
+      <label for="off-details">Description / Notes</label>
+      <textarea id="off-details" name="details" rows="4" placeholder="Add more info about what you can teach..."></textarea>
+
+      <!-- Buttons -->
+      <div class="form-actions">
+        <button type="submit">Submit Offer</button>
+        <button type="reset">Clear</button>
+      </div>
+    </fieldset>
+  </form>
+</body>
+</html>

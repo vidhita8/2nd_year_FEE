@@ -1,0 +1,191 @@
+/* ===== Global Styles ===== */
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background-color: #0f162e;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Page Heading ===== */
+h1 {
+  text-align: center;
+  margin: 25px 0 15px 0;
+  font-size: 2rem;
+  color: white;
+}
+
+/* ===== Tabs ===== */
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.tab-buttons button {
+  padding: 10px 22px;
+  border: none;
+  background: #e9ecef;
+  color: #333;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.tab-buttons button:hover {
+  background: #d6d8db;
+}
+
+.tab-buttons button.active {
+  background: #5624d0; /* Udemy purple */
+  color: #fff;
+}
+
+/* ===== Form Container ===== */
+form {
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+  background: #0f172a;
+  padding: 30px 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px #475569;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  display: none;
+}
+
+form.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Fieldsets ===== */
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+legend {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 15px;
+}
+
+/* ===== Labels ===== */
+label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 6px;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+/* ===== Form Controls ===== */
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s, transform 0.1s;
+  box-sizing: border-box;
+  display: block;
+  margin-bottom: 15px; /* equal spacing below every input */
+  background-color: #fff;
+}
+
+/* Focus styles */
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #5624d0;
+  box-shadow: 0 0 4px rgba(86, 36, 208, 0.3);
+  transform: scale(1.01);
+}
+
+/* ===== Normalize Select & Date Picker ===== */
+select,
+input[type="date"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-position: right 12px center;
+  background-repeat: no-repeat;
+  padding-right: 40px; /* space for icon */
+  background-color: #fff;
+}
+
+/* Custom dropdown arrow for select */
+select {
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='14' viewBox='0 0 24 24' width='14' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+}
+
+/* Custom calendar icon for date input */
+input[type="date"] {
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='14' viewBox='0 0 24 24' width='14' xmlns='http://www.w3.org/2000/svg'><path d='M7 11h10v2H7z'/><path d='M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z'/></svg>");
+}
+
+/* ===== Textarea ===== */
+textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+/* ===== Buttons ===== */
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.form-actions button {
+  flex: 1;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+button[type="submit"] {
+  background: #5624d0;
+  color: #fff;
+}
+
+button[type="submit"]:hover {
+  background: #401a99;
+}
+
+button[type="reset"] {
+  background: #e9ecef;
+  color: #333;
+}
+
+button[type="reset"]:hover {
+  background: #d6d8db;
+}
+
+/* ===== Mobile Optimization ===== */
+@media (max-width: 480px) {
+  .tab-buttons {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  form {
+    padding: 20px 15px;
+  }
+}

@@ -1,0 +1,163 @@
+/* Reset & Global */
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #0f162e;
+  color: white;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #0f172a;
+  box-shadow: 0 2px 5px #475569;
+  position: sticky;
+  top: 0;
+}
+.navbar .logo { 
+  font-size: 1.3rem; 
+  font-weight: 600; 
+  color: white; 
+}
+.navbar nav a {
+  margin-left: 1.2rem;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+.navbar nav a.active,
+.navbar nav a:hover { 
+  color:white; 
+}
+
+/* Container */
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 2rem;
+}
+
+/* Card */
+.signup-card {
+  background: #0f172a;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px #475569;
+  max-width: 420px;
+  width: 100%;
+}
+.signup-card h2 {
+  margin-bottom: 1rem;
+  color: white;
+  text-align: center;
+}
+.signup-card p {
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  text-align: center;
+  color: white;
+}
+
+/* Form */
+form label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+  color: white;
+}
+form input,
+form textarea,
+form select {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
+  background: #fff;
+}
+form input:focus,
+form textarea:focus,
+form select:focus {
+  border: 1px solid white;
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.15);
+}
+form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+.hint {
+  display: block;
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin-top: -0.8rem;
+  margin-bottom: 1rem;
+}
+
+/* Button */
+.btn-primary {
+  display: block;
+  width: 100%;
+  padding: 0.8rem;
+  background:#5a49df;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background 0.2s;
+}
+.btn-primary:hover { 
+  background: #5a49df; 
+}
+
+/* Signup link */
+.switch-auth {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+.switch-auth a {
+  color:#5a49df;
+  text-decoration: none;
+  font-weight: 500;
+}
+.switch-auth a:hover { 
+  text-decoration: underline; 
+}
+
+/* Footer */
+.footer {
+  background: #0f172a;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: white;
+  margin-top: 2rem;
+  border-top: 1px solid rgba(37,99,235,0.15);
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .signup-card { 
+    padding: 1.5rem; 
+  }
+  .navbar nav a { 
+    margin-left: 0.8rem; 
+    font-size: 0.9rem; 
+  }
+}
