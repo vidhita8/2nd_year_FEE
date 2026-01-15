@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SkillBarter • Trade skills, not money</title>
+  <link rel="stylesheet" href="home.css">
+  <meta name="description" content="Peer-to-peer skill barter platform — exchange skills with credits or direct matches. Built with semantic HTML and modern CSS." />
+</head>
+<body>
+  <!-- Header -->
+  <header aria-label="Main Navigation">
+    <div class="container nav">
+      <a href="#" class="brand" aria-label="SkillBarter home">
+        <span class="logo" aria-hidden="true"></span>
+        <span>SkillBridge </span>
+      </a>
+      <nav class="navlinks" aria-label="Primary">
+        <a href="#explore">Explore</a>
+        <a href="#how">How it works</a>
+        <a href="#credits">Credits</a>
+        <a href="signup.html" class="btn btn-ghost" role="button">Sign in</a>
+        <a href="login.html" class="btn btn-ghost" role="button">Log in</a>
+        <a href="#get-started" class="btn btn-primary" role="button">Get started</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+     <a href="request.html" class="fab">+</a>
+  <div class="dashboard-circle">
+    <a href="Dashboard.html">✍️</a>
+  </div>
+    <div class="container hero-inner">
+      <div>
+        <span class="pill" aria-label="Non-monetary exchanges">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 7h10v10H7z" opacity=".2"/><path d="M3 3h6v6H3zm12 0h6v6h-6zM3 15h6v6H3zm12 6v-6h6v6z"/></svg>
+          Barter skills • No fees
+        </span>
+        <h1>Trade skills, not money.</h1>
+        <p>Offer what you know. Learn what you want. Match directly with people or use <strong>barter credits</strong> when a perfect swap isn’t available.</p>
+        <form class="searchbar" role="search" aria-label="Search skills">
+          <input type="search" name="q" placeholder="Try: Python, Guitar, French, UI Design…" aria-label="Search skills" />
+          <select aria-label="Choose category">
+            <option value="">All categories</option>
+            <option>Programming</option>
+            <option>Design</option>
+            <option>Languages</option>
+            <option>Music</option>
+            <option>Fitness</option>
+            <option>Cooking</option>
+          </select>
+          <button class="btn btn-primary" type="submit" aria-label="Search">Find matches</button>
+        </form>
+        <div class="statbar" aria-label="Platform stats">
+          <div class="stat" aria-live="polite"><b>12,540</b> learners helped</div>
+          <div class="stat"><b>2,100+</b> skills listed</div>
+          <div class="stat"><b>48,320</b> swaps completed</div>
+        </div>
+      </div>
+      <div class="hero-card" aria-label="Sample barter preview">
+        <div style="display:flex; align-items:center; gap:12px; margin-bottom:8px;">
+          <div class="avatar" aria-hidden="true"></div>
+          <div>
+            <div style="font-weight:800">Alice • Frontend Dev</div>
+            <div class="meta">Offers: React • Wants: Logo Design</div>
+          </div>
+        </div>
+        <div style="display:flex; align-items:center; gap:10px; margin:10px 0;">
+          <span class="tag"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l4 8h8l-6 6 3 8-9-5-9 5 3-8-6-6h8z"/></svg> Offers</span>
+          <span class="tag">React Mentorship</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:10px; margin:6px 0 16px;">
+          <span class="tag"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l4 8h8l-6 6 3 8-9-5-9 5 3-8-6-6h8z"/></svg> Wants</span>
+          <span class="tag">Logo & Branding</span>
+        </div>
+        <div style="display:flex; gap:10px;">
+          <button class="btn btn-primary" type="button">Request swap</button>
+          <button class="btn btn-ghost" type="button">Save</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section id="explore">
+    <div class="container">
+      <div class="section-title">
+        <h2>Explore categories</h2>
+        <a href="#" class="btn btn-ghost">View all</a>
+      </div>
+      <div class="grid categories" role="list">
+        <a class="cat" role="listitem" href="#">
+          <span class="icon" aria-hidden="true">💻</span>
+          <div>
+            <div class="title">Programming</div>
+            <div class="meta">Web, Mobile, Data</div>
+          </div>
+        </a>
+        <a class="cat" role="listitem" href="#">
+          <span class="icon">🎨</span>
+          <div><div class="title">Design</div><div class="meta">UI/UX, Graphics</div></div>
+        </a>
+        <a class="cat" role="listitem" href="#">
+          <span class="icon">🗣️</span>
+          <div><div class="title">Languages</div><div class="meta">English, French…</div></div>
+        </a>
+        <a class="cat" role="listitem" href="#">
+          <span class="icon">🎵</span>
+          <div><div class="title">Music</div><div class="meta">Guitar, Piano</div></div>
+        </a>
+        <a class="cat" role="listitem" href="#">
+          <span class="icon">💪</span>
+          <div><div class="title">Fitness</div><div class="meta">Yoga, Training</div></div>
+        </a>
+        <a class="cat" role="listitem" href="#">
+          <span class="icon">🍳</span>
+          <div><div class="title">Cooking</div><div class="meta">Home, Baking</div></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured skills -->
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <h2>Featured skills</h2>
+        <div class="pill">Curated for you</div>
+      </div>
+      <div class="grid cards" role="list">
+        <!-- Card 1 -->
+        <article class="card" role="listitem">
+          <header>
+            <div style="display:flex; align-items:center; gap:10px;">
+              <div class="avatar" aria-hidden="true"></div>
+              <div>
+                <div class="title">Python for Data Analysis</div>
+                <div class="meta">by Aman • 4.9 ★ (120)</div>
+              </div>
+            </div>
+          </header>
+          <div style="display:flex; flex-wrap:wrap; gap:8px;">
+            <span class="tag">Offers: Pandas • NumPy</span>
+            <span class="tag">Wants: Spanish Basics</span>
+          </div>
+          <p class="meta">Hands-on sessions using your datasets, 2 hours/week.</p>
+          <div style="display:flex; gap:10px; margin-top:auto;">
+            <button class="btn btn-primary">Request</button>
+            <button class="btn btn-ghost">Profile</button>
+          </div>
+        </article>
+        <!-- Card 2 -->
+        <article class="card" role="listitem">
+          <header>
+            <div style="display:flex; align-items:center; gap:10px;">
+              <div class="avatar" aria-hidden="true"></div>
+              <div>
+                <div class="title">Logo & Brand Kit</div>
+                <div class="meta">by Meera • 4.8 ★ (86)</div>
+              </div>
+            </div>
+          </header>
+          <div style="display:flex; flex-wrap:wrap; gap:8px;">
+            <span class="tag">Offers: Figma • Illustrator</span>
+            <span class="tag">Wants: React Mentoring</span>
+          </div>
+          <p class="meta">Complete starter brand kit in a week.</p>
+          <div style="display:flex; gap:10px; margin-top:auto;">
+            <button class="btn btn-primary">Request</button>
+            <button class="btn btn-ghost">Profile</button>
+          </div>
+        </article>
+        <!-- Card 3 -->
+        <article class="card" role="listitem">
+          <header>
+            <div style="display:flex; align-items:center; gap:10px;">
+              <div class="avatar" aria-hidden="true"></div>
+              <div>
+                <div class="title">Conversational French</div>
+                <div class="meta">by Louis • 5.0 ★ (40)</div>
+              </div>
+            </div>
+          </header>
+          <div style="display:flex; flex-wrap:wrap; gap:8px;">
+            <span class="tag">Offers: French A1–B1</span>
+            <span class="tag">Wants: Guitar</span>
+          </div>
+          <p class="meta">Fun, practical lessons focused on speaking.</p>
+          <div style="display:flex; gap:10px; margin-top:auto;">
+            <button class="btn btn-primary">Request</button>
+            <button class="btn btn-ghost">Profile</button>
+          </div>
+        </article>
+        <div><a href="cards.html">See more...</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how">
+    <div class="container">
+      <div class="section-title">
+        <h2>How it works</h2>
+      </div>
+      <div class="grid steps">
+        <div class="step">
+          <div class="num" aria-hidden="true">1</div>
+          <h3>List your skills</h3>
+          <p class="meta">Add what you can teach and what you want to learn.</p>
+        </div>
+        <div class="step">
+          <div class="num" aria-hidden="true">2</div>
+          <h3>Match or earn credits</h3>
+          <p class="meta">Swap directly when there’s a fit, or teach to earn <strong>barter credits</strong>.</p>
+        </div>
+        <div class="step">
+          <div class="num" aria-hidden="true">3</div>
+          <h3>Swap & rate</h3>
+          <p class="meta">Schedule sessions, complete the swap, leave feedback.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Credits banner -->
+  <section id="credits">
+    <div class="container">
+      <div class="credits">
+        <div>
+          <span class="pill credit-pill">Barter credits</span>
+          <h2 style="margin:.6rem 0 0">Learn anytime with credits.</h2>
+          <p class="meta">Couldn’t find a perfect pair? Teach someone now, earn credits, and spend them later to learn from anyone.</p>
+          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <span class="tag">1 hour teaching = 1 credit</span>
+            <span class="tag">Spend credits to learn</span>
+            <span class="tag">Fraud-safe transfers</span>
+          </div>
+        </div>
+        <div aria-hidden="true" style="display:grid; place-items:center;">
+          <!-- Simple illustrative credit coin using SVG -->
+          <svg width="220" height="220" viewBox="0 0 200 200" role="img" aria-label="Credits illustration">
+            <defs>
+              <linearGradient id="g" x1="0" x2="1">
+                <stop offset="0" stop-color="#00d1b2"/>
+                <stop offset="1" stop-color="#6c5ce7"/>
+              </linearGradient>
+            </defs>
+            <circle cx="100" cy="100" r="84" fill="url(#g)" opacity=".25"/>
+            <circle cx="100" cy="100" r="70" fill="url(#g)" opacity=".5"/>
+            <circle cx="100" cy="100" r="56" fill="url(#g)"/>
+            <text x="100" y="108" text-anchor="middle" font-size="46" font-weight="800" fill="#fff">C</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <h2>What people say</h2>
+      </div>
+      <div class="grid testimonials" role="list">
+        <figure class="quote" role="listitem">
+          <span aria-hidden="true">💬</span>
+          <figcaption>
+            “I traded yoga lessons for English speaking practice. No money, just motivation.”
+            <div class="meta">— Kavya, Delhi</div>
+          </figcaption>
+        </figure>
+        <figure class="quote" role="listitem">
+          <span aria-hidden="true">💬</span>
+          <figcaption>
+            “Barter credits meant I could learn React when I couldn’t find a direct pair.”
+            <div class="meta">— Rohan, Pune</div>
+          </figcaption>
+        </figure>
+        <figure class="quote" role="listitem">
+          <span aria-hidden="true">💬</span>
+          <figcaption>
+            “Designed three logos and learned basic French. Win–win.”
+            <div class="meta">— Meera, Bengaluru</div>
+          </figcaption>
+        </figure>
+        <a href="feedback.html" class="feedback-circle">💬</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to action -->
+  <section id="get-started">
+    <div class="container" style="text-align:center;">
+      <h2>Ready to swap skills?</h2>
+      <p class="meta">Create your profile, list your skills, and find your first match today.</p>
+      <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+        <a class="btn btn-primary" href="#">Create free account</a>
+        <a class="btn btn-ghost" href="#">Browse marketplace</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container" style="display:grid; gap:16px; grid-template-columns: 1.2fr .8fr;">
+      <div>
+        <div class="brand" style="margin-bottom:8px;">
+          <span class="logo" aria-hidden="true"></span>
+          <span>SkillBridge</span>
+        </div>
+        <div>© <span id="year"></span> SkillBridge. Built for learning communities.</div>
+      </div>
+      <div style="display:flex; gap:20px; justify-content:flex-end; flex-wrap:wrap;">
+        <a href="#">Terms</a>
+        <a href="#">Privacy</a>
+        <a href="#">Support</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- tiny inline JS just to set year; safe to remove if pure HTML is required -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

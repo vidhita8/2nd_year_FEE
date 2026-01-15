@@ -1,0 +1,137 @@
+/* Reset & Global */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #0f162e;
+  color: #1f2937;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background:  #0b1020;
+  box-shadow: 0 2px 5px #475569;
+  position: sticky;
+  top: 0;
+}
+.navbar .logo { font-size: 1.3rem; font-weight: 600; color:  white; }
+.navbar nav a {
+  margin-left: 1.2rem;
+  text-decoration: none;
+  color: #1f2937;
+  font-weight: 500;
+}
+.navbar nav a.active,
+.navbar nav a:hover { color: white; }
+
+/* Container */
+.feedback-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 2rem;
+}
+
+/* Card */
+.feedback-card {
+  background: #0f172a;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px #475569;
+  max-width: 600px;
+  width: 100%;
+}
+.feedback-card h2 {
+  margin-bottom: 0.5rem;
+  color: white;
+  text-align: center;
+}
+.feedback-card p {
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  text-align: center;
+  color: white;
+}
+
+/* Form */
+form label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+  color:white;
+}
+form input, form select, form textarea {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
+}
+form input:focus, form select:focus, form textarea:focus {
+  border: 1px solid #5a49df;
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.15);
+}
+
+/* Button */
+.btn-primary {
+  display: block;
+  width: 100%;
+  padding: 0.8rem;
+  background: #5a49df;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background 0.2s;
+}
+.btn-primary:hover { background: #5a49df; }
+
+/* Stars (CSS-only rating) */
+.stars {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  margin-bottom: 1rem;
+}
+.stars input {
+  display: none;
+}
+.stars label {
+  font-size: 28px;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.stars input:checked ~ label,
+.stars label:hover,
+.stars label:hover ~ label {
+  color: gold;
+}
+
+/* Footer */
+.footer {
+  background: #0b1020;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color:white;
+  margin-top: 2rem;
+  border-top: 1px solid #475569;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .feedback-card { padding: 1.5rem; }
+  .navbar nav a { margin-left: 0.8rem; font-size: 0.9rem; }
+}

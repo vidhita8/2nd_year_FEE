@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up - Skill Barter</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="signup.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">SkillBridge</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="browse.html">Browse</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="login.html">Login</a>
+      <a href="signup.html" class="active">Sign Up</a>
+    </nav>
+  </header>
+
+  <!-- Signup Section -->
+  <main class="signup-container">
+    <div class="signup-card">
+      <h2>Create an Account</h2>
+      <p>Join SkillBarter and start sharing your skills today.</p>
+
+      <form action="welcome.html" method="post">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" autocomplete="name" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" autocomplete="email" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" pattern="[0-9]{10}" required>
+        <small class="hint">Format: 10 digits (e.g., 9876543210)</small>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Create a password" autocomplete="new-password" required>
+
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" id="confirm-password" name="confirm-password" placeholder="Re-enter password" autocomplete="off" required>
+
+        <label for="location">Location</label>
+        <input type="text" id="location" name="location" placeholder="City, Country">
+
+        <label for="bio">Bio</label>
+        <textarea id="bio" name="bio" rows="4" placeholder="Tell us about yourself..."></textarea>
+
+        <label for="availability">Availability</label>
+        <select id="availability" name="availability" required>
+          <option value="" disabled selected>Select availability</option>
+          <option value="weekdays">Weekdays</option>
+          <option value="weekends">Weekends</option>
+          <option value="evenings">Evenings</option>
+          <option value="mornings">Mornings</option>
+          <option value="flexible">Flexible</option>
+        </select>
+
+        <button type="submit" class="btn-primary">Sign Up</button>
+      </form>
+
+      <p class="switch-auth">Already have an account? <a href="login.html">Login</a></p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 SkillBridge. All rights reserved.</p>
+  </footer>
+</body>
+</html>

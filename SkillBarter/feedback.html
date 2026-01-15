@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feedback - SkillBridge</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="feedback.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">SkillBridge</div>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="browse.html" class="active">Browse</a>
+      <a href="dashboard.html" class="active">Dashboard</a>
+      <a href="login.html" class="active">Login</a>
+      <a href="signup.html" class="active">Sign Up</a>
+      <a href="feedback.html" class="active">Feedback</a>
+    </nav>
+  </header>
+
+  <!-- Feedback Section -->
+  <main class="feedback-container">
+    <div class="feedback-card">
+      <h2>We Value Your Feedback</h2>
+      <p>Help us improve SkillBarter by sharing your thoughts.</p>
+
+      <form>
+        <!-- User Info -->
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Enter your full name">
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="Enter your email">
+
+        <!-- Experience -->
+        <label>Overall Experience</label>
+        <div class="stars">
+          <input type="radio" id="star5" name="experience" value="5">
+          <label for="star5">⭐</label>
+
+          <input type="radio" id="star4" name="experience" value="4">
+          <label for="star4">⭐</label>
+
+          <input type="radio" id="star3" name="experience" value="3">
+          <label for="star3">⭐</label>
+
+          <input type="radio" id="star2" name="experience" value="2">
+          <label for="star2">⭐</label>
+
+          <input type="radio" id="star1" name="experience" value="1">
+          <label for="star1">⭐</label>
+        </div>
+
+        <!-- Skill Barter Specific -->
+        <label for="ease">Ease of Creating Profile & Listing Skills</label>
+        <select id="ease" name="ease">
+          <option>Very Easy</option>
+          <option>Easy</option>
+          <option>Average</option>
+          <option>Difficult</option>
+        </select>
+
+        <label for="matching">Satisfaction with Matching Process</label>
+        <select id="matching" name="matching">
+          <option>Very Satisfied</option>
+          <option>Satisfied</option>
+          <option>Neutral</option>
+          <option>Unsatisfied</option>
+        </select>
+
+        <label>Did you successfully exchange skills?</label>
+        <select name="exchange">
+          <option>Yes</option>
+          <option>No</option>
+          <option>Not Yet</option>
+        </select>
+
+        <label for="credit">Was the credit/barter system clear?</label>
+        <select id="credit" name="credit">
+          <option>Yes, very clear</option>
+          <option>Somewhat clear</option>
+          <option>No, confusing</option>
+        </select>
+
+        <!-- Open Feedback -->
+        <label for="like">What did you like the most?</label>
+        <textarea id="like" name="like"></textarea>
+
+        <label for="improve">What can we improve?</label>
+        <textarea id="improve" name="improve"></textarea>
+
+        <label for="features">Any new features you'd like?</label>
+        <textarea id="features" name="features"></textarea>
+
+        <!-- Recommendation -->
+        <label>Would you recommend this platform?</label>
+        <select name="recommend">
+          <option>Yes</option>
+          <option>No</option>
+          <option>Maybe</option>
+        </select>
+
+        <button type="submit" class="btn-primary">Submit Feedback</button>
+      </form>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 SkillBridge. All rights reserved.</p>
+  </footer>
+</body>
+</html>
